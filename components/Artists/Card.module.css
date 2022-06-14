@@ -4,6 +4,7 @@
   cursor: pointer;
 
   transition: all 0.3s linear;
+  position: relative;
 }
 .artist:hover {
   transform: scale(1.1);

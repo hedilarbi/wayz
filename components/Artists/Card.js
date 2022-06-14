@@ -1,9 +1,10 @@
 import styles from "./Card.module.css";
 import { FaYoutube, FaSpotify } from "react-icons/fa";
+import Image from "next/image";
 function Card(props) {
   return (
     <div className={styles.artist}>
-      <img src={props.image} alt="" />
+      <Image src={props.image} alt="artist" layout="fill" />
 
       <div className={styles.info}>
         <div className={styles.name}>{props.name}</div>

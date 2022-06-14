@@ -52,11 +52,12 @@ const Services = () => {
         <div className={styles.underline}></div>
       </div>
       <div className={styles.services}>
-        {services.map((service) => {
+        {services.map((service, index) => {
           return (
             <Service
               service={service.service}
               description={service.description}
+              key={index}
             />
           );
         })}

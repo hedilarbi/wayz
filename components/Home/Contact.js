@@ -1,5 +1,5 @@
 import styles from "./Contact.module.css";
-
+import Image from "next/image";
 function Contact() {
   return (
     <div className={styles.contact}>
@@ -8,7 +8,7 @@ function Contact() {
       <div className={styles.contactContainer}>
         <div className={styles.imageContainer}>
           <div className={styles.image}>
-            <img src="/contact.png" alt="" />
+            <Image src="/contact.png" alt="contact" layout="fill" />
           </div>
         </div>
         <div className={styles.formContainer}>
