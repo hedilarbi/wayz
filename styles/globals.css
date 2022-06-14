@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins;
+
+  background-color: black;
+  color: white;
+}
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+li {
+  list-style: none;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+
+main {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 30vw;
+  height: 80vh;
+  perspective: 1000px;
+  border: 2px solid #eeeeee;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: black;
+  color: black;
+  padding: 4rem;
+}
+.flip-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}

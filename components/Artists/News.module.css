@@ -1,0 +1,128 @@
+.news {
+  width: 100%;
+  padding-top: 10vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.underline {
+  width: 8rem;
+  height: 5px;
+
+  background-image: radial-gradient(#bb444b, #000000);
+  margin: 2px auto;
+}
+
+.main {
+  display: none;
+  margin-top: 3.5rem;
+  padding: 0 7rem;
+  grid-template-columns: 48% 48%;
+  gap: 0.75rem;
+  height: 70vh;
+}
+.first {
+  height: 70vh;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.first:hover {
+  transform: scale(1.05);
+}
+.first video {
+  height: 70vh;
+  width: 100%;
+  object-fit: cover;
+}
+.secondary {
+  gap: 0.75rem;
+  grid-template-rows: 48% 48%;
+  display: grid;
+}
+.second {
+  height: 35vh;
+  position: relative;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.second:hover {
+  transform: scale(1.05);
+}
+.second video {
+  height: 35vh;
+  width: 100%;
+  object-fit: cover;
+}
+.third {
+  grid-template-columns: 48% 48%;
+  gap: 0.75rem;
+  position: relative;
+  display: grid;
+}
+
+.three {
+  height: 35vh;
+  position: relative;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.three:hover {
+  transform: scale(1.05);
+}
+.three video {
+  height: 34vh;
+  width: 100%;
+  object-fit: cover;
+}
+.thumbTitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.third h2 {
+  font-size: 0.75rem;
+}
+.mainPhone {
+  display: grid;
+  width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+.new {
+  width: 80vw;
+  position: relative;
+  border-radius: 10px;
+}
+.new img {
+  width: 80vw;
+  object-fit: cover;
+  height: 50vh;
+  border-radius: 10px;
+}
+.new h2 {
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 0;
+  left: 0;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .news {
+    height: 100vh;
+  }
+  .main {
+    display: grid;
+  }
+  .mainPhone {
+    display: none;
+  }
+}

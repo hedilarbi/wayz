@@ -1,0 +1,70 @@
+.footer {
+  width: 100%;
+  height: 45vh;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 30%;
+  padding: 1rem 3rem;
+  overflow: hidden;
+  border-top: solid 1px white;
+  margin-top: 40vh;
+  padding-top: 2rem;
+}
+.footer h4 {
+  font-size: 1.5rem;
+  letter-spacing: 0.35rem;
+}
+
+.left img {
+  width: 10rem;
+  object-fit: contain;
+  margin-top: 1rem;
+}
+
+.left p {
+  margin-top: 3rem;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.middle {
+  margin-left: 2rem;
+}
+
+.middle li {
+  font-size: 1.25rem;
+}
+.middle li a {
+  letter-spacing: 4px;
+}
+
+.right a {
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 3px;
+}
+
+.right span {
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}
+
+.contact li {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+}
+
+.contact span {
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}

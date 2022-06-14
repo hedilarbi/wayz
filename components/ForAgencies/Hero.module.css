@@ -1,0 +1,38 @@
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    url("../../public/agency-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  overflow: hidden;
+  padding: 0 5%;
+}
+
+.description {
+  margin-top: 30vh;
+}
+
+.description h1 {
+  color: #bb444b;
+  font-size: 8vh;
+  text-transform: uppercase;
+}
+.description p {
+  width: 40vw;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+
+.description button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: #eeeeee;
+  background-color: #bb444b;
+  margin-top: 5rem;
+  border: 1px solid #bb444b;
+  border-radius: 5px;
+}

@@ -1,0 +1,14 @@
+.card {
+  border: 2px solid #eeeeee;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.card h3 {
+  color: #bb444b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.card p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}

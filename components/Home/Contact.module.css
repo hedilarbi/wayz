@@ -1,0 +1,120 @@
+.contact {
+  width: 85%;
+
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+.title {
+  text-align: center;
+}
+
+.underline {
+  width: 7rem;
+  height: 4px;
+
+  background-image: radial-gradient(#bb444b, #000000);
+  margin: 0 auto;
+}
+
+.contactContainer {
+  width: 90%;
+  height: 75%;
+  margin: 0 auto;
+  margin-top: 10vh;
+  display: grid;
+}
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #16191b;
+  display: none;
+  place-content: center;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.formContainer {
+  background-color: #c7c7c7;
+  padding: 1rem 1rem;
+  padding-top: 2rem;
+}
+
+.formHeader h6 {
+  margin-top: 0.2rem;
+  color: #757575;
+}
+.formHeader h3 {
+  font-size: 1.6rem;
+}
+
+.form {
+  display: grid;
+  width: 100%;
+}
+
+.form input,
+.form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #16191b;
+  margin: 1rem 0;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  font-family: "Montserrat";
+  transition: padding 0.3s ease;
+}
+
+.form input:focus::placeholder,
+.form textarea:focus::placeholder {
+  color: transparent;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+
+  border-bottom: 1px solid #fc260b;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.buttons button {
+  width: 40%;
+  height: 3rem;
+  font-size: 1.2rem;
+}
+
+.submitForm {
+  background-color: #16191b;
+  color: #eeeeee;
+  border: none;
+}
+
+.appointement {
+  background-color: #fc280b;
+  color: #eeeeee;
+  border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact {
+    height: 100vh;
+  }
+  .contactContainer {
+    grid-template-columns: 45% 55%;
+  }
+
+  .imageContainer {
+    display: grid;
+  }
+}
