@@ -127,9 +127,15 @@
   left: 50%;
   transform: translate(-50%, 50%);
   z-index: 5000;
-  font-size: 8vh;
+  font-size: 2rem;
   color: #eeeeee;
 }
 .block h1 span {
   color: #bb444b;
+}
+
+@media only screen and (min-width > 768) {
+  .block h1 {
+    font-size: 8vh;
+  }
 }

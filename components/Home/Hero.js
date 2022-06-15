@@ -12,15 +12,14 @@ function Hero() {
   const handleScroll = (e) => {
     const { pageYOffset } = window;
 
-    if (window.innerWidth > 768) {
-      left.current.style.transform = `translateX(-${pageYOffset / 60 + 10}%)`;
-      right.current.style.transform = `translateX(${pageYOffset / 60 + 10}%)`;
-      left.current.style.opacity = `${1 - pageYOffset / 900}`;
-      right.current.style.opacity = `${1 - pageYOffset / 900}`;
-    } else {
-      left.current.style.transform = `translateX()`;
-      right.current.style.transform = `translateX()`;
-    }
+    left.current.style.transform = `translateX(-${pageYOffset / 60 + 10}%)`;
+    right.current.style.transform = `translateX(${pageYOffset / 60 + 10}%)`;
+    left.current.style.opacity = `${1 - pageYOffset / 900}`;
+    right.current.style.opacity = `${1 - pageYOffset / 900}`;
+
+    left.current.style.transform = `translateX()`;
+    right.current.style.transform = `translateX()`;
+
     background.current.style.transform = `scale(${0.955 + pageYOffset / 8000})`;
     stone.current.style.transform = `scale(${0.955 + pageYOffset / 5000})`;
     background.current.style.opacity = `${1 - pageYOffset / 1100}`;
