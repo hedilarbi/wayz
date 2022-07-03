@@ -12,6 +12,9 @@ body {
 body {
   overflow-x: hidden;
 }
+main {
+  position: relative;
+}
 
 a {
   color: inherit;

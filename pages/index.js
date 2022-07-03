@@ -2,7 +2,6 @@ import styles from "../styles/Home.module.css";
 import Hero from "../components/Home/Hero";
 
 import Services from "../components/Home/Services";
-import { FiChevronUp } from "react-icons/fi";
 import Contact from "../components/Home/Contact";
 import Artists from "../components/Artists/Artists";
 import News from "../components/Artists/News";
@@ -16,7 +15,8 @@ export default function Home() {
         </h1>
       </div>
       <Services />
-
+      <News />
+      <Artists />
       <Contact />
     </div>
   );

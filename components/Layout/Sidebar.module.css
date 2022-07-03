@@ -1,0 +1,59 @@
+.sidebar {
+  width: 70vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: black;
+  color: var(--white);
+
+  border-left: 1px solid var(--orange);
+
+  transform: translate(-100%);
+  transition: all 0.5s ease;
+  display: grid;
+  z-index: 10000;
+}
+.open {
+  transform: translate(0%);
+}
+.close {
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  color: #bb444b;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.nav li {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  letter-spacing: 0.2rem;
+  width: 100%;
+}
+.nav li a {
+  display: block;
+  padding: 0.5rem 0;
+}
+.nav li:nth-child(1) {
+  margin-top: 1rem;
+}
+.social {
+  align-self: flex-end;
+  display: flex;
+  padding: 0 1rem;
+  padding-bottom: 2rem;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}

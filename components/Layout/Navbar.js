@@ -1,14 +1,14 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import styles from "./navbar.module.css";
 import { useRouter } from "next/router";
 import { AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
+import Sidebar from "./Sidebar";
 
-function Navbar({ setIstoggled }) {
+function Navbar() {
   const router = useRouter();
-  gsap.registerPlugin(ScrollToPlugin);
+  const [isToggled, setIsToggled] = useState(false);
 
   const home = useRef();
   const about = useRef();
@@ -49,57 +49,60 @@ function Navbar({ setIstoggled }) {
   }, []);
 
   return (
-    <header className={styles.header} ref={navbar}>
-      <div className={styles.container}>
-        <nav className={styles.nav}>
-          <ul className={styles.ul}>
-            <li
-              className={styles.li}
-              ref={home}
-              onMouseEnter={() => mouseEnterHandler(home)}
-              onMouseLeave={() => mouseLeaveHandler(home)}
-            >
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li
-              className={styles.li}
-              ref={services}
-              onMouseEnter={() => mouseEnterHandler(services)}
-              onMouseLeave={() => mouseLeaveHandler(services)}
-            >
-              <Link href="/services/artists">
-                <a>Artists</a>
-              </Link>
-            </li>
-            <li
-              className={styles.li}
-              ref={artists}
-              onMouseEnter={() => mouseEnterHandler(artists)}
-              onMouseLeave={() => mouseLeaveHandler(artists)}
-            >
-              <Link href="/services/agencies">
-                <a>Agencies</a>
-              </Link>
-            </li>
-            <li
-              className={styles.li}
-              ref={about}
-              onMouseEnter={() => mouseEnterHandler(about)}
-              onMouseLeave={() => mouseLeaveHandler(about)}
-            >
-              <Link href="/about">
-                <a>About</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <div className={styles.hamburger} onClick={() => setIstoggled(true)}>
-          <AiOutlineMenu />
+    <>
+      <header className={styles.header} ref={navbar}>
+        <div className={styles.container}>
+          <nav className={styles.nav}>
+            <ul className={styles.ul}>
+              <li
+                className={styles.li}
+                ref={home}
+                onMouseEnter={() => mouseEnterHandler(home)}
+                onMouseLeave={() => mouseLeaveHandler(home)}
+              >
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+              </li>
+              <li
+                className={styles.li}
+                ref={services}
+                onMouseEnter={() => mouseEnterHandler(services)}
+                onMouseLeave={() => mouseLeaveHandler(services)}
+              >
+                <Link href="/services/artists">
+                  <a>Artists</a>
+                </Link>
+              </li>
+              <li
+                className={styles.li}
+                ref={artists}
+                onMouseEnter={() => mouseEnterHandler(artists)}
+                onMouseLeave={() => mouseLeaveHandler(artists)}
+              >
+                <Link href="/services/agencies">
+                  <a>Agencies</a>
+                </Link>
+              </li>
+              <li
+                className={styles.li}
+                ref={about}
+                onMouseEnter={() => mouseEnterHandler(about)}
+                onMouseLeave={() => mouseLeaveHandler(about)}
+              >
+                <Link href="/about">
+                  <a>About</a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <div className={styles.hamburger} onClick={() => setIsToggled(true)}>
+            <AiOutlineMenu />
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <Sidebar isToggled={isToggled} setIsToggled={setIsToggled} />
+    </>
   );
 }
 

@@ -8,8 +8,6 @@ function artists() {
     <div>
       <Hero />
       <Services />
-      <News />
-      <Artists />
     </div>
   );
 }
